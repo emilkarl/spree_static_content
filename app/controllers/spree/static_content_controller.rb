@@ -1,8 +1,4 @@
 class Spree::StaticContentController < Spree::BaseController
-  caches_action :show, :cache_path => Proc.new { |controller|
-    "spree_static_content/" + controller.params[:path]
-  }
-  
   layout :determine_layout
   
   def show
